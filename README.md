@@ -59,3 +59,8 @@
  
 ![示例图](Screenshot_20240914_144934.png)
 
+
+```kotlin
+maven { url = uri("https://jitpack.io") }
+implementation "com.github.xiaoxiaoying:PwdView:1.0.4"
+```
