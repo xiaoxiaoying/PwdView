@@ -2,8 +2,7 @@ package com.xiaoxiaoying.pwdview
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.xiaoxiaoying.pwdview.R
-import com.xiaoxiaoying.pwdview.databinding.ActivityMainBinding
+import com.xiaoxiaoying.pwdview.simple.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

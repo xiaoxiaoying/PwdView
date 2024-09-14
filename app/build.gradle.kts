@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.xiaoxiaoying.pwdview"
+    namespace = "com.xiaoxiaoying.pwdview.simple"
     compileSdk = 34
 
     defaultConfig {
