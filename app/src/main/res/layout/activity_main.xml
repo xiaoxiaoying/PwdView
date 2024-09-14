@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.xiaoxiaoying.pwdview.widget.PasswordEditText
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:backgroundBorderColor="#FF0000"
+        app:backgroundBorderSize="3dp"
+        app:backgroundColor="#CC000000"
+        app:interval="4dp"
+        app:keyboard_type="custom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:passwordNumber="6" />
+
+    <com.xiaoxiaoying.pwdview.widget.PasswordEditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:interval="4dp"
+        app:keyboard_type="custom"
+        app:layout_constraintTop_toBottomOf="@id/background"
+        app:passwordNumber="6" />
+
+    <com.xiaoxiaoying.pwdview.widget.PasswordEditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:interval="0dp"
+        app:keyboard_type="custom"
+        app:layout_constraintTop_toBottomOf="@id/editText"
+        app:passwordNumber="6" />
+
+    <com.xiaoxiaoying.pwdview.widget.PasswordEditText
+        android:id="@+id/activityModel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:interval="4dp"
+        app:keyboard_type="custom"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:mode="activity"
+        app:passwordNumber="6" />
+
+    <com.xiaoxiaoying.pwdview.widget.CustomKeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:deleteColor="#FF0000"
+        app:itemTextColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

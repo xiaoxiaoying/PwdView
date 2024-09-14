@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PasswordEditText">
+        <!--密码个数-->
+        <attr name="passwordNumber" format="integer" />
+        <!--密码原点的半径-->
+        <attr name="passwordRadius" format="dimension" />
+        <!--密码原点的颜色-->
+        <attr name="passwordColor" format="color" />
+        <attr name="errorColor" format="color" />
+        <!--分割线的颜色-->
+        <attr name="divisionLineColor" format="color" />
+        <!--分割线的大小  指宽度-->
+        <attr name="divisionLineSize" format="dimension" />
+        <!--背景边框的颜色-->
+        <attr name="backgroundBorderColor" format="color" />
+        <!--    光标颜色    -->
+        <attr name="cursorColor" format="color" />
+        <!--背景边框的大小-->
+        <attr name="backgroundBorderSize" format="dimension" />
+        <attr name="backgroundColor" format="color" />
+        <!--   间隔距离     -->
+        <attr name="interval" format="dimension" />
+        <!--背景边框的圆角大小-->
+        <attr name="bgCorner" format="dimension" />
+
+
+        <attr name="input_type" format="enum">
+            <enum name="password" value="0" />
+            <enum name="number" value="1" />
+        </attr>
+        <attr name="mode" format="enum">
+            <enum name="dialog" value="0" />
+            <enum name="activity" value="1" />
+        </attr>
+
+        <!--    键盘类型，使用自定义键盘还是系统键盘    -->
+        <attr name="keyboard_type" format="enum">
+            <enum name="custom" value="0" />
+            <enum name="system" value="1" />
+        </attr>
+
+        <attr name="pwd_type" format="enum">
+            <enum name="origin" value="0" />
+            <enum name="star" value="1" />
+        </attr>
+
+        <attr name="endHasCursor" format="boolean" />
+
+    </declare-styleable>
+
+    <declare-styleable name="CustomKeyboardView">
+        <attr name="isSoundEffect" format="boolean" />
+        <attr name="isVibrate" format="boolean" />
+        <attr name="sortType" format="enum">
+            <enum name="insanity" value="0" />
+            <enum name="order" value="1" />
+        </attr>
+        <attr name="hintText" format="string" />
+        <attr name="hintTextColor" format="color" />
+        <attr name="hintTextSize" format="dimension" />
+        <attr name="backgroundColor"  />
+        <attr name="itemBackground" format="reference" />
+        <attr name="itemTextColor" format="color" />
+        <attr name="itemTextSize" format="dimension" />
+
+        <attr name="deleteColor" format="color" />
+        <attr name="deleteDrawable" format="reference" />
+
+    </declare-styleable>
+
+</resources>
