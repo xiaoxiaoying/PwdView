@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -46,4 +47,18 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("mavenJava") {
+//            from(components["kotlin"]) // 根据你项目的实际组件进行替换
+            groupId = "com.github.xiaoxiaoying"
+            artifactId = "PwdView" // 替换为你的 artifact ID
+            version = "1.0.2"
+        }
+    }
+    repositories {
+        mavenLocal() // 发布到本地 Maven 仓库
+    }
 }
