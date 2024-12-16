@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 rootProject.name = "PwdView"
 include(":app")
 include(":pwdview")
+include(":pwdviewcompose")

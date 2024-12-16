@@ -37,12 +37,12 @@ android {
         jvmTarget = "17"
     }
     buildFeatures {
-//        compose = true
+        compose = true
         viewBinding = true
         buildConfig = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
     packaging {
         resources {
@@ -72,4 +72,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation(project(":pwdview"))
+    implementation(project(":pwdviewcompose"))
 }

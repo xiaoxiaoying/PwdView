@@ -1,7 +1,9 @@
 package com.xiaoxiaoying.pwdview
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.xiaoxiaoying.MainComposeActivity
 import com.xiaoxiaoying.pwdview.simple.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +24,10 @@ class MainActivity : AppCompatActivity() {
                 root.passwordEditText.deletePassword()
             }
 
+        }
+
+        root.compose.setOnClickListener {
+            startActivity(Intent(this, MainComposeActivity::class.java))
         }
     }
 }
