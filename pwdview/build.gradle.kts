@@ -42,7 +42,6 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.array.adapter)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -55,7 +54,7 @@ publishing {
 //            from(components["kotlin"]) // 根据你项目的实际组件进行替换
             groupId = "com.github.xiaoxiaoying"
             artifactId = "PwdView" // 替换为你的 artifact ID
-            version = "1.0.5"
+            version = "1.0.6"
         }
     }
     repositories {

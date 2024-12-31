@@ -18,7 +18,6 @@ import com.xiaoxiaoying.pwdview.model.CustomKeyboardModel
 import com.xiaoxiaoying.pwdview.model.KeyboardItemConfig
 import com.xiaoxiaoying.pwdview.utils.dipToPix
 import com.xiaoxiaoying.pwdview.utils.vibrator
-import com.xiaoxiaoying.recyclerarrayadapter.listener.OnItemClickListener
 import kotlin.random.Random
 
 /**
@@ -195,7 +194,7 @@ class CustomKeyboardView @JvmOverloads constructor(
         return value
     }
 
-    private fun onItemClick(t: Any?, view: View) {
+    private fun onItemClick(t: Any?) {
         t ?: return
         try {
             if (isSoundEffect) {
@@ -258,18 +257,14 @@ class CustomKeyboardView @JvmOverloads constructor(
                     div * 2 else div
             }
         })
-        adapter?.onItemClickListener = object : OnItemClickListener<Any> {
-            override fun onItemClick(t: Any?, view: View) {
-                this@CustomKeyboardView.onItemClick(t, view)
-            }
-        }
+        adapter?.onItemClick = this::onItemClick
         adapter?.onDeleteLongCall = {
             onNumberDeleteCall?.invoke(true)
         }
     }
 
     private fun changeNumber() {
-        adapter?.clean()
+        adapter?.clear()
         numberArray.clear()
         if (sortType == SORT_TYPE_ORDER) {
             repeat(9) {
