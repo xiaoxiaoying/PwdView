@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.mavenPublish)
+    `maven-publish`
 }
 
 android {
@@ -48,16 +48,21 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+
 publishing {
     publications {
-        create<MavenPublication>("release") {
-//            from(components["kotlin"]) // 根据你项目的实际组件进行替换
-            groupId = "com.github.xiaoxiaoying"
-            artifactId = "view" // 替换为你的 artifact ID
-            version = "1.0.9"
+        create<MavenPublication>("mavenJava") {
+
+            groupId = "com.github.xiaoxiaoying" // Group ID
+            artifactId = "pwd-view"                  // Artifact ID
+            version = "1.1.0"                    // 版本号
+
         }
     }
+
     repositories {
-        mavenLocal() // 发布到本地 Maven 仓库
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
