@@ -4,10 +4,15 @@
 
 ```xml
 
-<com.xiaoxiaoying.pwdview.widget.PasswordEditText android:id="@+id/passwordEditText"
-    android:layout_width="match_parent" android:layout_height="48dp"
-    android:layout_marginHorizontal="16dp" android:layout_marginTop="20dp"
-    app:keyboard_type="custom" app:interval="0dp" app:layout_constraintTop_toTopOf="parent"
+<com.xiaoxiaoying.pwdview.widget.PasswordEditText 
+    android:id="@+id/passwordEditText"
+    android:layout_width="match_parent" 
+    android:layout_height="48dp"
+    android:layout_marginHorizontal="16dp" 
+    android:layout_marginTop="20dp"
+    app:keyboard_type="custom" 
+    app:interval="0dp" 
+    app:layout_constraintTop_toTopOf="parent"
     app:passwordNumber="6" />
 
 ```
@@ -35,15 +40,18 @@
 
 ```xml
 
-<com.xiaoxiaoying.pwdview.widget.CustomKeyboardView android:id="@+id/keyboard"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
-    app:deleteColor="#FF0000" app:itemTextColor="#FF0000"
+<com.xiaoxiaoying.pwdview.widget.CustomKeyboardView 
+    android:id="@+id/keyboard"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    app:deleteColor="#FF0000" 
+    app:itemTextColor="#FF0000"
     app:layout_constraintBottom_toBottomOf="parent" />
 
 ```
 
 | 属性              | 注释                      |
-|-----------------|-------------------------|
+|:----------------|-------------------------|
 | isSoundEffects  | 是否开启声音                  |
 | isVibrate       | 是否开启震动                  |
 | sortType        | 排序类型 1、insanity 2、order |
@@ -56,11 +64,41 @@
 | itemTextSize    | 数字键大小                   |
 | deleteColor     | 删除键颜色                   |
 | deleteDrawable  | 删除按钮图片                  |
- 
+
+###### PwdView-Compose 使用
+
+```kotlin
+
+@Composable
+fun PasswordEditTextPreview() {
+    PasswordEditText(
+        Modifier
+            .fillMaxWidth()
+            .background(Color.White),
+        value = TextFieldValue("123"),
+        onValueChange = {},
+        config = PasswordEditConfig().apply {
+            space = 6.dp
+            mode = PasswordEditConfig.Mode.MODE_DIALOG
+            passwordRadius = 10.dp
+            pwdType = PasswordEditConfig.Type.PWD_TYPE_STAR
+            inputType = PasswordEditConfig.InputType.INPUT_TYPE_NUMBER
+        })
+}
+
+```
+
+
 ![示例图](Screenshot_20240914_144934.png)
 
 
 ```kotlin
 maven { url = uri("https://jitpack.io") }
-implementation "com.github.xiaoxiaoying:PwdView:1.0.4"
+
+
+// compose
+//    implementation("com.github.xiaoxiaoying.PwdView:compose:1.1.0")
+
+// View
+//    implementation("com.github.xiaoxiaoying.PwdView:view:1.1.0")
 ```
