@@ -94,7 +94,7 @@ fun PasswordEditTextPreview() {
 
 ```kotlin
 maven { url = uri("https://jitpack.io") }
-
+implementation("com.github.xiaoxiaoying:PwdView:1.1.0")
 
 // compose
 //    implementation("com.github.xiaoxiaoying.PwdView:compose:1.1.0")
