@@ -62,7 +62,6 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("release") {
-            from(components["release"])  // 使用 release 组件来确保发布 AAR
             groupId = "com.github.xiaoxiaoying" // Group ID
             artifactId = "compose"                  // Artifact ID
             version = "1.1.0"                    // 版本号
