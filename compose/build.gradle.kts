@@ -67,7 +67,7 @@ afterEvaluate {
                 // from(components["release"])
                 // You can then customize attributes of the publication as shown below.
                 groupId = "com.github.xiaoxiaoying" // Group ID
-                artifactId = "compose"                  // Artifact ID
+                artifactId = "PwdView-Compose"                  // Artifact ID
                 version = "1.1.0"                    // 版本号
 
             }
