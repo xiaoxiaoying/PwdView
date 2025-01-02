@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
-    `maven-publish`
+    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -48,20 +48,19 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            create<MavenPublication>("release") {
+                // Applies the component for the release build variant.\
+                // from(components["release"])
+                // You can then customize attributes of the publication as shown below.
+                groupId = "com.github.xiaoxiaoying" // Group ID
+                artifactId = "compose"                  // Artifact ID
+                version = "1.1.0"                    // 版本号
 
-publishing {
-    publications {
-        create<MavenPublication>("release") {
-            groupId = "com.github.xiaoxiaoying" // Group ID
-            artifactId = "view"                  // Artifact ID
-            version = "1.1.0"                    // 版本号
-
-        }
-    }
-
-    repositories {
-        maven {
-            url = uri("https://jitpack.io")
+            }
         }
     }
 }
